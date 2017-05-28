@@ -1,7 +1,19 @@
-<suite name="Suite">
-  <test name="Test">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AutomationSuite" parallel="tests">
+  <test name="TestChrome">
+  	<parameter name="nodeURL" value="http://192.168.1.2:4444/wd/hub"/>
+   	<parameter name="browser" value="chrome"/>
+    <parameter name="AppURL" value="http://localhost/login.do"/>
     <packages>
     	<package name = "test"/>
     </packages>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+  <test name="TestFireFox">
+  	<parameter name="nodeURL" value="http://192.168.1.2:4444/wd/hub"/>
+   	<parameter name="browser" value="firefox"/>
+    <parameter name="AppURL" value="http://localhost/login.do"/>
+    <packages>
+    	<package name = "test"/>
+    </packages>
+  </test> 
+</suite>
